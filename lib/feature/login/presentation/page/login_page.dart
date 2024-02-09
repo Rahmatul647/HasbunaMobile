@@ -28,10 +28,14 @@ class LoginPage extends StatelessWidget {
                   const SizedBox(
                     height: 50,
                   ),
+                  Image.asset('assets/images/logo.svg'),
+                  const SizedBox(
+                    height: 50,
+                  ),
                   FormBuilderTextField(
-                    name: 'Username',
+                    name: 'Nama',
                     decoration: InputDecoration(
-                        hintText: 'Username',
+                        hintText: 'Masukkan nama',
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15))),
                     validator: FormBuilderValidators.required(),
@@ -40,9 +44,9 @@ class LoginPage extends StatelessWidget {
                     height: 24,
                   ),
                   FormBuilderTextField(
-                    name: 'Password',
+                    name: 'No Telp',
                     decoration: InputDecoration(
-                        hintText: 'Password',
+                        hintText: 'Masukkan no telp',
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15))),
                     validator: FormBuilderValidators.required(),
@@ -50,7 +54,13 @@ class LoginPage extends StatelessWidget {
                   const SizedBox(
                     height: 24,
                   ),
-                  FilledButton(onPressed: () {}, child: const Text("Login"))
+                  FilledButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "Masuk",
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      ))
                 ]),
           ),
         ),
