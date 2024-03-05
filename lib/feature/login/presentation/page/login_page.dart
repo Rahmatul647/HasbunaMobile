@@ -1,3 +1,4 @@
+import 'package:catering/feature/dashboard/presentation/dashboard_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
@@ -28,7 +29,11 @@ class LoginPage extends StatelessWidget {
                   const SizedBox(
                     height: 50,
                   ),
-                  Image.asset('assets/images/logo.svg'),
+                  Image.asset(
+                    'assets/images/logo1.png',
+                    height: 200,
+                    width: 200,
+                  ),
                   const SizedBox(
                     height: 50,
                   ),
@@ -45,6 +50,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   FormBuilderTextField(
                     name: 'No Telp',
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                         hintText: 'Masukkan no telp',
                         border: OutlineInputBorder(
@@ -55,12 +61,20 @@ class LoginPage extends StatelessWidget {
                     height: 24,
                   ),
                   FilledButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Dashboard()));
+                      },
                       child: const Text(
                         "Masuk",
                         style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.bold),
-                      ))
+                            fontSize: 25, fontWeight: FontWeight.w700),
+                      )),
+                  const SizedBox(
+                    height: 16,
+                  )
                 ]),
           ),
         ),

@@ -52,4 +52,5 @@ flutter:
   assets:
 
   - assets/images/logo.svg
-  
+  - assets/images/logo.jpeg
+  - assets/images/logo1.png
